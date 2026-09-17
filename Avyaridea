@@ -1,1 +1,108 @@
+index.html 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avyaridea</title>
 
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #111827;
+    color: white;
+    text-align: center;
+}
+
+header {
+    background: #1f2937;
+    padding: 25px;
+}
+
+.hero {
+    padding: 45px 20px;
+}
+
+.book {
+    background: #1f2937;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 500px;
+}
+
+.read {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#story {
+    display: none;
+    padding: 30px;
+}
+
+#storyText {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.8;
+    text-align: left;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Avyaridea 📖</h1>
+</header>
+
+<section class="hero">
+    <h2>My Books 📚</h2>
+    <p>Read my stories.</p>
+
+    <div class="book">
+        <h2>The Dark Beginning</h2>
+        <p>Written by Avyar</p>
+        <p>A young man begins a dangerous journey...</p>
+
+        <button class="read" onclick="readBook()">
+            Read Book 📖
+        </button>
+    </div>
+</section>
+
+<section id="story">
+
+    <h2>The Dark Beginning</h2>
+
+    <div id="storyText">
+        <p>
+        This is the beginning of the story.
+        </p>
+
+        <p>
+        Chapter 1 is coming soon...
+        </p>
+    </div>
+
+</section>
+
+<script>
+
+function readBook() {
+    document.getElementById("story").style.display = "block";
+
+    window.scrollTo({
+        top: document.getElementById("story").offsetTop,
+        behavior: "smooth"
+    });
+}
+
+</script>
+
+</body>
+</html>

@@ -1,11 +1,11 @@
 index.html
-DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Avyaridea</title>
+    <title>Avyar</title>
 </head>
 <body>
-    <h1>Avyaridea</h1>
-    <p>My story is coming...</p>
+    <h1>Welcome to Avyar! 🚀</h1>
+    <p>This is my website.</p>
 </body>
 </html>

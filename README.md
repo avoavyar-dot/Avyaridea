@@ -1,4 +1,4 @@
-# Avyaridea
+index.htm1
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,70 +7,115 @@
     <title>Avyaridea</title>
 
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #0f172a;
+            background: #111827;
             color: white;
             text-align: center;
         }
 
-        nav {
-            padding: 20px;
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .hero {
-            min-height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 30px;
+        header {
+            padding: 25px;
+            background: #1f2937;
         }
 
         h1 {
-            font-size: 60px;
-            margin: 10px;
+            margin: 0;
         }
 
-        p {
-            font-size: 20px;
-            max-width: 600px;
-            color: #cbd5e1;
+        .hero {
+            padding: 60px 20px;
         }
 
         button {
-            margin-top: 25px;
-            padding: 15px 35px;
+            padding: 14px 28px;
             border: none;
-            border-radius: 30px;
-            font-size: 18px;
+            border-radius: 25px;
+            font-size: 17px;
             cursor: pointer;
+        }
+
+        input, textarea {
+            width: 80%;
+            max-width: 500px;
+            padding: 12px;
+            margin: 8px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        textarea {
+            height: 150px;
+        }
+
+        #creator {
+            display: none;
+            padding: 30px 20px;
         }
     </style>
 </head>
 
 <body>
 
-    <nav>Avyaridea 🚀</nav>
+<header>
+    <h1>Avyaridea 📖</h1>
+</header>
 
-    <section class="hero">
-        <h1>Welcome to Avyar</h1>
+<section class="hero">
+    <h2>Create Your Story</h2>
+    <p>Turn your ideas into your own books.</p>
 
-        <p>
-            My website. My ideas. My future.
-        </p>
+    <button onclick="openCreator()">
+        Create a Book ✍️
+    </button>
+</section>
 
-        <button onclick="alert('Welcome to Avyar! 🔥')">
-            Enter Avyar
-        </button>
-    </section>
+<section id="creator">
+
+    <h2>New Book 📚</h2>
+
+    <input id="title" placeholder="Book title">
+
+    <br>
+
+    <input id="author" placeholder="Author name">
+
+    <br>
+
+    <textarea id="idea" placeholder="Write your story idea..."></textarea>
+
+    <br>
+
+    <button onclick="saveBook()">Save Book</button>
+
+    <p id="saved"></p>
+
+</section>
+
+<script>
+
+function openCreator() {
+    document.getElementById("creator").style.display = "block";
+}
+
+function saveBook() {
+
+    let title = document.getElementById("title").value;
+
+    if (title === "") {
+        alert("Please enter a book title.");
+        return;
+    }
+
+    document.getElementById("saved").textContent =
+        "Your book '" + title + "' is ready! 📖🔥";
+}
+
+</script>
 
 </body>
 </html>
+    
+
+        
